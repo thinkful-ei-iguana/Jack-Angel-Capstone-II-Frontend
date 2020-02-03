@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import UserContext from '../../contexts/UserContext'
-import './Header.css'
+import '../../Styles/Header.css'
 
 class Header extends Component {
   static contextType = UserContext
@@ -43,9 +43,14 @@ class Header extends Component {
       <header>
         <h1>
           <Link to='/'>
-            Spaced repetition
+            <h1> Spaced Repetition </h1>
           </Link>
         </h1>
+        <section> 
+          <p>
+            Practice learning Spanish with the spaced reptition revision technique.
+          </p>
+        </section>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
           : this.renderLoginLink()}

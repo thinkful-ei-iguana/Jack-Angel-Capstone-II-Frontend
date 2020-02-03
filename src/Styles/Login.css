@@ -1,0 +1,7 @@
+.LoginForm{
+  max-width: 600px;
+  flex-direction: column;
+  margin: auto;
+  padding: 0 10px;
+  overflow: hidden;
+}

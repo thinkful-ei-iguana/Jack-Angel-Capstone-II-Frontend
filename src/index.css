@@ -12,6 +12,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-:root {
-  --font-size: calc(10px + 1vmin);
+html, body, #root, .App, .App_main {
+  height: 100%;
+  background: #f7971e;
+  background: -webkit-linear-gradient(to right, #f7971e, #ffd200);
+  background: linear-gradient(to right, #f7971e, #ffd200);
 }
