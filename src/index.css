@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css?family=Raleway|Shadows+Into+Light&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,8 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Ubuntu", sans-serif;
+  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Raleway', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

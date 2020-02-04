@@ -61,7 +61,9 @@ class LoginForm extends Component {
                 name='username'
                 required
                 className="landing-form-text"
-              />      
+              />
+                
+                   
               {/* <Label htmlFor='login-password-input'>
                 Password
               </Label> */}
@@ -73,9 +75,11 @@ class LoginForm extends Component {
                 required
                 className="landing-form-text"
               />
-            <Button type='submit'>
-              Login
-            </Button>
+            <div className="btn-container">
+              <Button className="btn" type='submit'>
+                Login
+              </Button>
+            </div>
           </form>
         </div>
       </div>

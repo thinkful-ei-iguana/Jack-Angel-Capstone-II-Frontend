@@ -86,9 +86,11 @@ class RegistrationForm extends Component {
               className="landing-form-text"
               required
             />
-            <Button type='submit'>
-              Sign up
-            </Button>
+            <div className="btn-container">
+              <Button className="btn" type='submit'>
+                Sign up
+              </Button>
+            </div>
           </form>
         </div>
         <footer>
