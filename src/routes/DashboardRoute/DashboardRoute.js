@@ -1,13 +1,12 @@
 import React, { Component } from 'react'
+import Dashboard from '../../components/Dashboard/Dashboard'
 
-class DashboardRoute extends Component {
+export default class DashboardRoute extends Component {
   render() {
     return (
-      <section>
-        implement and style me
-      </section>
+      <div>
+        <Dashboard />
+      </div>
     );
   }
 }
-
-export default DashboardRoute
