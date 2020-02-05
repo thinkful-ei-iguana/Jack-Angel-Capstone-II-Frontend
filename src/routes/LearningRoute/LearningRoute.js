@@ -29,13 +29,13 @@ export default class LearningRoute extends Component {
         : res.json()  
     )
     .then(data => {
-      this.setState({
+      this.setState({ 
         head: data.nextWord, 
-        total: data.total,
-        correctWords: data.correctWords,
-        incorrectWords: data.incorrectWords,
-        currentWord: data.nextWord
-      })
+        total: data.totalScore, 
+        correctWords: data.wordCorrectCount, 
+        incorrectWords: data.wordIncorrectCount, 
+        currentWord: data.nextWord 
+      });
     });
   };
 
@@ -55,15 +55,15 @@ export default class LearningRoute extends Component {
         : res.json()
     )
     .then(data => {
-      
+      console.log(data)
       this.setState({
         head: data.nextWord,
         answer: data.answer, 
         correct: data.correct,
         currentWord: this.state.head,
-        correctWords: data.correctWords,
-        incorrectWords: data.incorrectWords,
-        total: data.total
+        correctWords: data.wordCorrectCount,
+        incorrectWords: data.wordIncorrectCount,
+        total: data.totalScore
       });
     });
   };
@@ -77,6 +77,7 @@ export default class LearningRoute extends Component {
   };
 
   handleNext = (e) => {
+    console.log('im fired up')
     this.setState({
       answer:'',
       guess:''
@@ -126,11 +127,10 @@ export default class LearningRoute extends Component {
                     />
                   <Button type="submit" className="submit-guess-btn"> Submit </Button>
                 </form>
-              )
-              :(
-                <Button className="next-question-btn" onChange={this.handleNext}> Next </Button>
-              )
-            }
+              ):(
+                <Button className="next-question-btn" onChange={e => this.handleNext(e)}> Next </Button>
+              )}
+            
           </div>
           <div> 
             {!this.state.answer
