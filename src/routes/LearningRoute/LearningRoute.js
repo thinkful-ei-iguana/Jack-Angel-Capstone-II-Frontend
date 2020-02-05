@@ -29,11 +29,12 @@ export default class LearningRoute extends Component {
         : res.json()  
     )
     .then(data => {
+      //console.log(data);
       this.setState({
         head: data.nextWord, 
-        total: data.total,
-        correctWords: data.correctWords,
-        incorrectWords: data.incorrectWords,
+        total: data.totalScore,
+        correctWords: data.wordCorrectCount,
+        incorrectWords: data.wordIncorrectCount,
         currentWord: data.nextWord
       })
     });
@@ -55,15 +56,15 @@ export default class LearningRoute extends Component {
         : res.json()
     )
     .then(data => {
-      
+      console.log(data);
       this.setState({
         head: data.nextWord,
         answer: data.answer, 
         correct: data.correct,
         currentWord: this.state.head,
-        correctWords: data.correctWords,
-        incorrectWords: data.incorrectWords,
-        total: data.total
+        correctWords: data.wordCorrectCount,
+        incorrectWords: data.wordIncorrectCount,
+        total: data.totalScore
       });
     });
   };
