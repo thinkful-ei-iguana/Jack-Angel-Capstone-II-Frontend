@@ -53,7 +53,7 @@ export default class Dashboard extends Component {
             
                     <div className="card-back">
                       <li> 
-                        <span> {word.translation} </span> 
+                        <span className="translation"> {word.translation} </span> 
                       </li>
                       <li>
                         <span className="correct-answers"> 

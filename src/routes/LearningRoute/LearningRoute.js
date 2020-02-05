@@ -29,14 +29,14 @@ export default class LearningRoute extends Component {
         : res.json()  
     )
     .then(data => {
-      //console.log(data);
-      this.setState({
+
+      this.setState({ 
         head: data.nextWord, 
-        total: data.totalScore,
-        correctWords: data.wordCorrectCount,
-        incorrectWords: data.wordIncorrectCount,
-        currentWord: data.nextWord
-      })
+        total: data.totalScore, 
+        correctWords: data.wordCorrectCount, 
+        incorrectWords: data.wordIncorrectCount, 
+        currentWord: data.nextWord 
+      });
     });
   };
 
@@ -56,7 +56,7 @@ export default class LearningRoute extends Component {
         : res.json()
     )
     .then(data => {
-      console.log(data);
+
       this.setState({
         head: data.nextWord,
         answer: data.answer, 
@@ -77,7 +77,8 @@ export default class LearningRoute extends Component {
     });
   };
 
-  handleNext = (e) => {
+  handleNext = () => {
+    console.log('im fired up')
     this.setState({
       answer:'',
       guess:''
@@ -107,16 +108,8 @@ export default class LearningRoute extends Component {
               ?(
                 <> 
                   <h3> Translate the word: </h3>
-                  <span> {this.state.head} </span>  
-                </>)
-              :(<> <h3> { this.state.correct ? result:result } </h3> </>)
-          
-            }
-          </div>
-          <div>
-            {!this.state.answer
-              ?(
-                <form className="guess-word-form" onSubmit={e => this.handleSubmit(e)}>
+                  <span> {this.state.head} </span> 
+                  <form className="guess-word-form" onSubmit={e => this.handleSubmit(e)}>
                   <Label> What is the translation for this word ? </Label>
                     <Input 
                       type="text"
@@ -126,25 +119,17 @@ export default class LearningRoute extends Component {
                       recquired
                     />
                   <Button type="submit" className="submit-guess-btn"> Submit </Button>
-                </form>
-              )
-              :(
-                <Button className="next-question-btn" onChange={this.handleNext}> Next </Button>
-              )
-            }
-          </div>
-          <div> 
-            {!this.state.answer
-              ?(
+                </form> 
                 <div>
                   <p> Times you've answered correctly: {this.state.correctWords}. </p>
                   <p> Times you've answered incorrectly: {this.state.incorrectWords}. </p>
                 </div>
-              )
-              :(
-                <p> Keep practicing, youre doing so well! </p>
-              )
-            
+                </>)
+              :(<> 
+              <h3> { this.state.correct ? result:result } </h3>
+              <Button className="next-question-btn" onClick={() => this.handleNext()}> Next </Button>
+              <p> Keep practicing, youre doing so well! </p>
+               </>)
             }
           </div>
         </section>
