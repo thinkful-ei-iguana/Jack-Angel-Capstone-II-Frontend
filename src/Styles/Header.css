@@ -4,9 +4,45 @@ h1{
   color: #e52d27;
 }
 
-nav {
+/* nav {
   text-align: center;
-} 
+}  */
+.open {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.open a {
+  width: 100%;
+  text-align: center;
+  margin: 0;
+}
+
+.user-links {
+  /* display: none; */
+  flex-direction: column;
+  height: 70px;
+  width: 50%;
+  right: 0;
+  top: 80px;
+  position: absolute;
+}
+.user-links a {
+  width: 60px;
+  padding: 3px 6px 6px 6px;
+  margin-right: 20px;
+}
+
+.divider { 
+  width: 100%;
+  border: 2px black;
+}
+.burger {
+  right: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  position: absolute;
+}
 
 p {
   text-align: center;

@@ -15,7 +15,7 @@ body {
 
 html, body, #root, .App, .App_main {
   height: 100%;
-  background: #f7971e;
-  background: -webkit-linear-gradient(to right, #f7971e, #ffd200);
-  background: linear-gradient(to right, #f7971e, #ffd200);
+  background: #b92b27;
+  background: -webkit-linear-gradient(to right, #b92b27, #1565c0);
+  background: linear-gradient(to right, #b92b27, #1565c0);
 }

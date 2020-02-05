@@ -55,6 +55,7 @@ export default class LearningRoute extends Component {
         : res.json()
     )
     .then(data => {
+      
       this.setState({
         head: data.nextWord,
         answer: data.answer, 
@@ -123,7 +124,7 @@ export default class LearningRoute extends Component {
                       name="question"
                       recquired
                     />
-                  <Button className="submit-guess-btn"> Submit </Button>
+                  <Button type="submit" className="submit-guess-btn"> Submit </Button>
                 </form>
               )
               :(
