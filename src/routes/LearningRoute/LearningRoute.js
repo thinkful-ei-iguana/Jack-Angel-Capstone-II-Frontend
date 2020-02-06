@@ -3,7 +3,7 @@ import TokenService from '../../services/token-service';
 import config from '../../config';
 import { Input, Label } from '../../components/Form/Form';
 import Button from '../../components/Button/Button';
-
+import '../../Styles/Learn.css'
 export default class LearningRoute extends Component {
   state = {
     head:'',
@@ -102,35 +102,54 @@ export default class LearningRoute extends Component {
     return (
       <div> 
         <section>
-          <p> {`Your total score is: ${this.state.total}`} </p>
-          <div>
+          <p className="total-score"> {`Your total score is: ${this.state.total}`} </p>
+          <div className="main-container">
             {!this.state.answer
               ?(
-                <> 
-                  <h3> Translate the word: </h3>
-                  <span> {this.state.head} </span> 
-                  <form className="guess-word-form" onSubmit={e => this.handleSubmit(e)}>
-                  <Label> What is the translation for this word ? </Label>
-                    <Input 
-                      type="text"
-                      value={this.state.guess}
-                      onChange={e => this.handleInput(e)}
-                      name="question"
-                      recquired
-                    />
-                  <Button type="submit" className="submit-guess-btn"> Submit </Button>
-                </form> 
+                <div className="container"> 
+                <div class="lines-q"></div>
+                  <h3 className="question"> Translate the word: </h3>
+                  <div className="form-container">
+                  
+                    <form className="guess-word-form" onSubmit={e => this.handleSubmit(e)}>
+                      
+                      <p className="word-to-translate"> {this.state.head} </p>
+                      <Input 
+                        placeholder="Translation"
+                        type="text"
+                        value={this.state.guess}
+                        onChange={e => this.handleInput(e)}
+                        name="question"
+                        className="question-input"
+                        recquired
+                      /><br/>
+                      <Button 
+                        type="submit" 
+                        className="submit-guess-btn"
+                      > 
+                        Submit 
+                      </Button>
+                    </form> 
+                  </div> 
                 <div>
-                  <p> Times you've answered correctly: {this.state.correctWords}. </p>
-                  <p> Times you've answered incorrectly: {this.state.incorrectWords}. </p>
+                  <p className="feedback-correct"> Times you've answered correctly : {this.state.correctWords} </p>
+                  <p className="feedback"> Times you've answered incorrectly : {this.state.incorrectWords} </p>
                 </div>
-                </>)
-              :(<> 
-              <h3> { this.state.correct ? result:result } </h3>
-              <Button className="next-question-btn" onClick={() => this.handleNext()}> Next </Button>
-              <p> Keep practicing, youre doing so well! </p>
-               </>)
-            }
+              </div>
+            )
+            :(
+              <div className="results-page"> 
+              <div class="lines-r"></div>
+                <h3> { this.state.correct ? result:result } </h3>
+                  <Button 
+                    className="next-question-btn" 
+                    onClick={() => this.handleNext()}
+                  > 
+                  Next Word 
+                </Button>
+                <p className="result-text"> Keep practicing, youre doing so well ! </p>
+               </div>
+            )}
           </div>
         </section>
       </div>

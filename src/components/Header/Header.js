@@ -3,47 +3,40 @@ import { Link } from 'react-router-dom'
 import TokenService from '../../services/token-service'
 import UserContext from '../../contexts/UserContext'
 import '../../Styles/Header.css'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBars, faTimes} from '@fortawesome/free-solid-svg-icons'
 
 class Header extends Component {
-  state = {
-    isOpen: false
-  }
-
   static contextType = UserContext
 
   handleLogoutClick = () => {
     this.context.processLogout()
   }
 
-  handleMenuClicked = () => {
-    this.setState({isOpen: !this.state.isOpen});
-  }
-
   renderLogoutLink() {
     return (
       <div>
-        <nav className={this.state.isOpen ? "user-links open" : "user-links"}>
-          <span className="user-name">
-            {this.context.user.name}
-          </span>
-            <div className="divider" />
-          <Link to='/'> Home </Link>
-          <Link
-            onClick={this.handleLogoutClick}
-            to='/login'>
-            Logout
-          </Link>
-          <FontAwesomeIcon
-            icon={this.state.isOpen ? faTimes : faBars} size="3px"
-            className="burger"
-            onClick={() => this.handleMenuClicked()}
-          />
-
-        </nav>
-
+        <h4 className="users-book">
+          {this.context.user.name}
+        </h4>
+        <div className="navbar">
+          <nav>
+            <Link
+              onClick={this.handleLogoutClick}
+              to='/login'>
+              Logout
+            </Link>
+          </nav>
+        </div>
       </div>
+    )
+  }
+
+  renderLoginLink() {
+    return (
+      <nav>
+        <Link to='/login'>Login</Link>
+        {' '}
+        <Link to='/register'>Sign up</Link>
+      </nav>
     )
   }
 
@@ -56,13 +49,13 @@ class Header extends Component {
           </Link>
         </h1>
         <section> 
-          <p>
-            Learn Spanish with the spaced reptition.
+          <p className="summary">
+            Practice learning Spanish with the spaced reptition.
           </p>
         </section>
         {TokenService.hasAuthToken()
           ? this.renderLogoutLink()
-          : null }
+          : this.renderLoginLink()}
       </header>
     );
   }

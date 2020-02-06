@@ -34,10 +34,9 @@ export default class Dashboard extends Component {
   render() {
     return (
       <div className="dashboard">
-        <h2> {this.state.language.name} </h2>
-        <section className="user-score"> {this.state.language.total_score} </section>
-        <Link to="/learn" className="user-practice-link"> Practice some Spanish </Link>
-        <h3 className="word-list-title"> Word Flash Cards </h3>
+        <section className="user-score"> Your Total Score: {this.state.language.total_score} </section>
+        <Link to="/learn" className="user-practice-link"> {this.state.language.name} Quiz </Link>
+        <h4 className="word-list-title"> {this.state.language.name} Vocabulary Flash Cards </h4>
           <ul className="word-list">
             {this.state.words.map((word, idx) => {
               return (
@@ -47,23 +46,23 @@ export default class Dashboard extends Component {
                     <div class="lines"></div>
                     <div className="card-front">
                       <li key={idx} className="word">
-                        <span> {word.original} </span>
+                        <h3 className="theWord"> {word.original} </h3>
                       </li> 
                     </div>
             
                     <div className="card-back">
                       <li> 
-                        <span className="translation"> {word.translation} </span> 
+                        <h3 className="translation"> {word.translation} </h3> 
                       </li>
                       <li>
-                        <span className="correct-answers"> 
+                        <p className="answers"> 
                           Your Correct Answers: {word.correct_count} 
-                        </span>
+                        </p>
                       </li>
                       <li>
-                        <span className="incorrect-answers"> 
+                        <p className="answers"> 
                           Incorrect Answers: {word.incorrect_count} 
-                        </span>
+                        </p>
                       </li>
                     </div>
                   </div>

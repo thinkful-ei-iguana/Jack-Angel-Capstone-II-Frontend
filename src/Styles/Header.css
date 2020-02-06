@@ -1,49 +1,64 @@
-h1{
+nav {
+  position: fixed;
+  right: 10px;
+  top:5px;
+}
+
+nav a {
+  color: #fff;
+}
+
+h1 {
   text-align: center;
   font-size: 35px;
-  color: #e52d27;
+  color: #fff;
+  font-family:'Raleway', sans-serif ;
 }
 
-/* nav {
+.summary {
+  color: #fff;
   text-align: center;
-}  */
-.open {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: 22px;
+  font-family:'Raleway', sans-serif ;
 }
-.open a {
-  width: 100%;
+
+.users-book {
+  position: fixed;
+  left: 10px;
+  top:5px;
+  margin-top:0;
+  margin-bottom: 0;
+  color: #fff;
+  text-decoration: underline #fff;
+}
+
+header{
+  margin-top: 25px;
+}
+
+h4.word-list-title {
+  font-size: 25px;
   text-align: center;
-  margin: 0;
+  color: #fff;
 }
 
-.user-links {
-  /* display: none; */
-  flex-direction: column;
-  height: 70px;
-  width: 50%;
-  right: 0;
-  top: 80px;
-  position: absolute;
-}
-.user-links a {
-  width: 60px;
-  padding: 3px 6px 6px 6px;
-  margin-right: 20px;
-}
 
-.divider { 
-  width: 100%;
-  border: 2px black;
-}
-.burger {
-  right: 0;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  position: absolute;
-}
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px){
 
-p {
-  text-align: center;
+  .users-book {
+    position: fixed;
+    left: 10px;
+    top:5px;
+    margin-top:0;
+    margin-bottom: 10px;
+    color: #fff;
+    text-decoration: underline #fff;
+    font-size: 12px;
+  }
+
+  nav {
+    font-size: 12px;
+  }
+
+
 }

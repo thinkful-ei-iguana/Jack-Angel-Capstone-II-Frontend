@@ -1,0 +1,235 @@
+
+.question {
+  border-top: 1px dotted #ccc;
+  border-bottom: 1px dotted #ccc;
+  border-width: 100%;
+  font-size: 32px;
+  margin-bottom: 0;
+}
+.container {
+  padding: 0 10px;
+  overflow: hidden;
+  box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 1);
+  border-radius: 6px;
+  background: white;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.lines-q {
+  border-left: 1px solid #ffaa9f;
+  border-right: 1px solid #ffaa9f;
+  width: 2px;
+  float: left;
+  height: 350px;
+  margin-left: 40px;
+  overflow: hidden;
+}
+
+.question-input {
+  width: 80%;
+  border: 0;
+  padding: 15px 40px 20px 8px;
+  outline: none;
+  background: #fff;
+  border-bottom: 1px dotted #ccc;
+  border-width: 100%;
+  margin: 10px;
+}
+
+.word-to-translate {
+  font-size: 28px;
+  border-bottom: 1px dotted #ccc;
+  border-width: 100%;
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+.total-score {
+  text-align: center;
+  color: #fff;
+  font-size: 20px;
+  font-family:'Raleway', sans-serif;
+}
+
+.submit-guess-btn{
+  margin-top: 5px;
+}
+
+.feedback {
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-right: 5px;
+  border-bottom: 1px dotted #ccc;
+  border-width: 100%;
+  font-size: 25px;
+  text-align: center;
+}
+.feedback-correct {
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-bottom: 0;
+  border-top: 1px dotted #ccc;
+  border-bottom: 1px dotted #ccc;
+  border-width: 100%;
+  font-size: 25px;
+  text-align: center;
+}
+
+.results-page {
+  box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 1);
+  border-radius: 6px;
+  background: white;
+  text-align: center;
+  margin-left: 25%;
+  margin-right: 25%;
+  text-align: center;
+  outline: 0;
+  border: 0;
+}
+.next-question-btn {
+  border-radius: 5px;
+  margin-top: 25px;
+  text-align: center;
+  padding:10px 30px 10px 30px;
+  font-size: 20px;
+}
+
+.result-text {
+  font-size: 25px;
+  padding-bottom: 10px;
+  border-top: 1px dotted #ccc;
+}
+
+.lines-r {
+  border-left: 1px solid #ffaa9f;
+  border-right: 1px solid #ffaa9f;
+  width: 2px;
+  float: left;
+  height: 149px;
+  margin-left: 40px;
+  overflow: hidden;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px)
+{
+  .question {
+    border-top: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
+    border-width: 100%;
+    margin-bottom:0 ;
+    font-size: 25px;
+  }
+  .main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  .container {
+    padding: 0;
+    overflow: hidden;
+    box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 1);
+    border-radius: 6px;
+    background: white;
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  form .guess-word-form {
+    max-width: 700px;
+    overflow: hidden;
+    margin: 10px; 
+  }
+
+  .lines-q {
+    border-left: 1px solid #ffaa9f;
+    border-right: 1px solid #ffaa9f;
+    width: 2px;
+    float: left;
+    height: 420px;
+    margin-left: 20px;
+    overflow: hidden;
+  }
+  
+  .question-input {
+    width: 80%;
+    border: 0;
+    padding:10px 15px 10px 10px;
+    outline: none;
+    border-radius: 3px;
+    background: #fff;
+    border-bottom: 1px dotted #ccc;
+    border-width: 100%;
+    font-size-adjust: 15px;
+  }
+  .word-to-translate {
+    font-size: 25px;
+    border-bottom: 1px dotted #ccc;
+    border-width: 100%;
+    margin-bottom: 0;
+    margin-top: 5px;
+    font-weight: 500;
+  }
+  
+  .feedback {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    margin-right: 5px;
+    border-bottom: 1px dotted #ccc;
+    border-width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+  .feedback-correct {
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-bottom: 0;
+    border-top: 1px dotted #ccc;
+    border-bottom: 1px dotted #ccc;
+    border-width: 100%;
+    font-size: 20px;
+    text-align: center;
+  }
+  .results-page {
+    box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 1);
+    border-radius: 6px;
+    background: white;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+    outline: 0;
+    border: 0;
+  }
+  .next-question-btn {
+    border-radius: 5px;
+    text-align: center;
+    padding:10px 20px 10px 20px;
+    font-size: 15px;
+    margin-top:5px;
+    margin-bottom:5px;
+  }
+  
+  .result-text {
+    font-size: 18px;
+    padding-top:10px;
+    padding-bottom: 5px;
+    border-top: 1px dotted #ccc;
+    margin-top:10px;
+    margin-bottom: 0;
+    margin-right:5px;
+  }
+  
+  .lines-r {
+    border-left: 1px solid #ffaa9f;
+    border-right: 1px solid #ffaa9f;
+    width: 2px;
+    float: left;
+    height: 175px;
+    margin-left: 30px;
+    overflow: hidden;
+  }
+
+}

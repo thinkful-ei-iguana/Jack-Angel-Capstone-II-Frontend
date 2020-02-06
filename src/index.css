@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+h2,h3, p {
+  font-family: 'Shadows Into Light', cursive;
+}
+
+span {
+  font-family: 'Raleway', sans-serif;
+}
+
 body {
   margin: 0;
   padding: 0;

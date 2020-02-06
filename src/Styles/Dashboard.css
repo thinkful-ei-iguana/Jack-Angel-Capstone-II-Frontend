@@ -3,6 +3,28 @@
   border-bottom: 1px dotted #ccc;
   border-width: 100%;
 }
+.user-practice-link {
+  display: block;
+  margin-top: 5px;
+  text-align: center;
+  color: #fff;
+}
+.word-list {
+  width: auto;
+  margin:0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-score {
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+}
+
 .lines {
   border-left: 1px solid #ffaa9f;
   border-right: 1px solid #ffaa9f;
@@ -16,12 +38,14 @@
 h3 {
   text-align: center;
 }
-
+.word-list-title{
+  margin-bottom: 10px;
+}
 .card-container {
   position: relative;
   width: 400px;
   height: 200px;
-  background-color: blue;
+  background-color: #ccc;
   margin-bottom: 15px;
   text-align: center;
   align-items: center;
@@ -30,7 +54,6 @@ h3 {
   margin-left: 25%;
   margin-right: 25%;
 }
-
 .theCard {
   position: absolute;
   width: 100%;
@@ -42,13 +65,10 @@ h3 {
   outline: none;
   border: 0;
   box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 1);
-  
 }
-
 .theCard:hover {
   transform: rotateY(180deg);
 }
-
 .card-front {
   position: absolute;
   width: 100%;
@@ -57,10 +77,19 @@ h3 {
   text-align: center;
   align-items: center;
   justify-content: center;
-  display: flex;
-  
+  padding-top: 15%;
+  padding-bottom: 15%;
 }
-
+.card-front li .theWord {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 35px;
+  padding-top: 15px;
+  border-top: 1px dotted #ccc;
+  border-width: 100%;
+  margin: 0 auto;
+}
 
 .card-back {
   position: absolute;
@@ -69,14 +98,115 @@ h3 {
   backface-visibility: hidden;
   transform: rotateY(180deg);
   text-align: center;
-  margin-bottom: 10px;
-  
 }
 
 .card-back li .translation {
   text-align: center;
+  padding-top: 5px;
   align-items: center;
   justify-content: center;
-  display: flex;
-  margin-top: 10px;
+  font-size: 35px;
+  margin: 0 auto;
+}
+
+.card-back li .answers {
+  font-weight: bold;
+  font-size: 17px;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) 
+{
+  .dashboard {
+    width: auto;
+    margin:0 auto;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .word-list {
+    width: auto;
+    margin:0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .lines {
+    border-left: 1px solid #ffaa9f;
+    border-right: 1px solid #ffaa9f;
+    width: 2px;
+    float: left;
+    height: 149px;
+    margin-left: 25px;
+    overflow: hidden;
+  }
+  .card-container {
+    position: relative;
+    width: 300px;
+    height: 150px;
+    background-color: #ccc;
+    margin-bottom: 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-left: 25%;
+    margin-right: 25%;
+  }
+  .theCard {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+    background-color: #f5f5f5;
+    border-radius: 2px;
+    outline: none;
+    border: 0;
+    box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 1);
+    
+  }
+  .theCard:hover {
+    transform: rotateY(180deg);
+  }
+  .card-front {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .card-front li .theWord {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    border-top: 1px dotted #ccc;
+    border-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    transform: rotateY(180deg);
+    text-align: center;
+  }
+  .card-back li .translation {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin:0;
+    padding: 0;
+  }
+  .card-back li .answers {
+    font-weight: bold;
+    font-size: 12px;
+  }
 }
