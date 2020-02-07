@@ -70,7 +70,7 @@ h3 {
 }
 .theCard::selection {
   transform: rotateY(180deg);
-  -webkit-transform: rotateY(180deg);
+  -webkit-transform: -webkit rotateY(180deg);
 }
 .card-front {
   position: absolute;
@@ -101,7 +101,7 @@ h3 {
   height: 100%;
   backface-visibility: hidden;
   transform: rotateY(180deg);
-  -webkit-transform: -webkit-transform rotateY(180deg);
+  -webkit-transform: -webkit rotateY(180deg);
   text-align: center;
 }
 
