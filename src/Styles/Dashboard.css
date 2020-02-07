@@ -66,7 +66,7 @@ h3 {
   border: 0;
   box-shadow: 0px 0px 20px 0px rgba(15, 15, 15, 1);
 }
-.theCard:hover {
+.theCard::selection {
   transform: rotateY(180deg);
 }
 .card-front {
