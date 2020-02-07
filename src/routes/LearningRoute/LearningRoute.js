@@ -60,7 +60,7 @@ export default class LearningRoute extends Component {
       this.setState({
         head: data.nextWord,
         answer: data.answer, 
-        correct: data.correct,
+        correct: data.isCorrect,
         currentWord: this.state.head,
         correctWords: data.wordCorrectCount,
         incorrectWords: data.wordIncorrectCount,
@@ -88,13 +88,13 @@ export default class LearningRoute extends Component {
   render() {
     let result;
     if(this.state.correct === true) {
-      result = <> <h2> Correct! </h2>
+      result = <> <h3> Correct! </h3>
         <p> The correct translation for {this.state.currentWord} was {this.state.answer} you chose {this.state.guess}. Way to go! </p>
       </>
     } else if (this.state.correct === false) {
       result = (
         <>
-          <h2> Good try but your answer is incorrect! </h2>
+          <h3> Good try but your answer is incorrect! </h3>
             <p> The correct translation is for {this.state.currentWord} was {this.state.answer}, you chose {this.state.guess}. </p>
         </>
       );
@@ -140,7 +140,7 @@ export default class LearningRoute extends Component {
             :(
               <div className="results-page"> 
               <div className="lines-r"></div>
-                <h3> { this.state.correct ? result:result } </h3>
+                 { this.state.correct ? result:result } 
                   <Button 
                     className="next-question-btn" 
                     onClick={() => this.handleNext()}
