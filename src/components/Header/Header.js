@@ -50,7 +50,7 @@ class Header extends Component {
         </h1>
         <section> 
           <p className="summary">
-            Practice learning Spanish with the spaced reptition.
+            Practice learning Spanish with the spaced repetition.
           </p>
         </section>
         {TokenService.hasAuthToken()

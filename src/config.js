@@ -1,7 +1,4 @@
 export default {
   API_ENDPOINT: 'https://mysterious-cliffs-03197.herokuapp.com/api',
-  TOKEN_KEY: 'blogful-client-auth-token',
+  TOKEN_KEY: process.env.TOKEN_KEY,
 }
-
-//https://mysterious-cliffs-03197.herokuapp.com/api
-//https://localhost:8000/api

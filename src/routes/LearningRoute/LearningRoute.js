@@ -147,7 +147,7 @@ export default class LearningRoute extends Component {
                   > 
                   Next Word 
                 </Button>
-                <p className="result-text"> Keep practicing, youre doing so well ! </p>
+            <p className="result-text"> Keep practicing, youre doing so well! </p>
                </div>
             )}
           </div>
