@@ -19,9 +19,9 @@ class Header extends Component {
         </h4>
         <div className="navbar">
           <nav>
-            <Link
+            <Link to='/login'
               onClick={this.handleLogoutClick}
-              to='/login'>
+              >
               Logout
             </Link>
           </nav>
@@ -45,7 +45,7 @@ class Header extends Component {
       <header>
         <h1>
           <Link to='/'>
-            <h1> Spanish </h1>
+            <h1> Spaced repetition </h1>
           </Link>
         </h1>
         <section> 
