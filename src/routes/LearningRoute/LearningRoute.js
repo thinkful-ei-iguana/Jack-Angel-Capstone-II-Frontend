@@ -88,14 +88,14 @@ export default class LearningRoute extends Component {
   render() {
     let result;
     if(this.state.correct === true) {
-      result = <> <h3> Correct! </h3>
-        <p> The correct translation for {this.state.currentWord} was {this.state.answer} you chose {this.state.guess}. Way to go! </p>
+      result = <> <h3 className="feedback-title"> Correct! </h3>
+        <p className="correct-translation-feedback"> The correct translation for <b>{this.state.currentWord}</b> was <b>{this.state.answer}</b>, you chose <b>{this.state.guess}</b>. Way to go! </p>
       </>
     } else if (this.state.correct === false) {
       result = (
         <>
-          <h3> Good try but your answer is incorrect! </h3>
-            <p> The correct translation is for {this.state.currentWord} was {this.state.answer}, you chose {this.state.guess}. </p>
+          <h3 className="feedback-title"> Good try but your answer is incorrect! </h3>
+            <p className="correct-translation-feedback"> The correct translation for <b>{this.state.currentWord}</b> was <b>{this.state.answer}</b>, you chose <b>{this.state.guess}</b>. </p>
         </>
       );
     };

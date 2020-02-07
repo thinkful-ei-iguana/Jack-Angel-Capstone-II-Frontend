@@ -38,6 +38,9 @@ export default class App extends Component {
                 path={'/learn'}
                 component={LearningRoute}
               />
+
+            
+
               <PublicOnlyRoute
                 path={'/register'}
                 component={RegistrationRoute}
