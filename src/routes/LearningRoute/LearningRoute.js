@@ -139,7 +139,7 @@ export default class LearningRoute extends Component {
             )
             :(
               <div className="results-page"> 
-              <div class="lines-r"></div>
+              <div className="lines-r"></div>
                 <h3> { this.state.correct ? result:result } </h3>
                   <Button 
                     className="next-question-btn" 
