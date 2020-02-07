@@ -62,7 +62,8 @@
 
 .feedback {
   margin-top: 5px;
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 0px;
   margin-right: 5px;
   border-bottom: 1px dotted #ccc;
   border-width: 100%;
@@ -110,7 +111,7 @@
   border-right: 1px solid #ffaa9f;
   width: 2px;
   float: left;
-  height: 149px;
+  height: 239px;
   margin-left: 40px;
   overflow: hidden;
 }
@@ -179,13 +180,14 @@
   
   .feedback {
     margin-top: 5px;
-    margin-bottom: 10px;
+    padding-bottom: 10px;
     margin-right: 5px;
     border-bottom: 1px dotted #ccc;
     border-width: 100%;
     font-size: 20px;
     text-align: center;
   }
+
   .feedback-correct {
     margin-top: 10px;
     margin-right: 5px;
