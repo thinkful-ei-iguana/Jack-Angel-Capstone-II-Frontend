@@ -54,6 +54,10 @@
 
 .submit-guess-btn{
   margin-top: 5px;
+  border-radius: 5px;
+  text-align: center;
+  padding:10px 30px 10px 30px;
+  font-size: 20px;
 }
 
 .feedback {
@@ -204,12 +208,16 @@
     border: 0;
   }
   .next-question-btn {
-    border-radius: 5px;
     text-align: center;
     padding:10px 20px 10px 20px;
     font-size: 15px;
     margin-top:5px;
     margin-bottom:5px;
+  }
+
+  .submit-guess-btn {
+    padding:10px 20px 10px 20px;
+    font-size: 15px;
   }
   
   .result-text {
