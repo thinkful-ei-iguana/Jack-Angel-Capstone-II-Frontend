@@ -62,6 +62,7 @@ h3 {
   height: 100%;
   transform-style: preserve-3d;
   transition: all 0.8s ease;
+  -webkit-transition: -webkit-all 0.8s ease;
   background-color: #f5f5f5;
   border-radius: 2px;
   outline: none;
@@ -166,6 +167,7 @@ h3 {
     height: 100%;
     transform-style: preserve-3d;
     transition: all 0.8s ease;
+    -webkit-transition: -webkit-all 0.8s ease;
     background-color: #f5f5f5;
     border-radius: 2px;
     outline: none;
