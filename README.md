@@ -1,5 +1,7 @@
 # Spaced Repetition Capstone
 
+team: Jack Pupel, Angel Alicea
+
 ## Setup
 
 To setup the application
